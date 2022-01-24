@@ -1,0 +1,72 @@
+{
+    "PasswordLength" : 24,
+    "EmailRecipients" : ["dba@example.com"],
+    "SMTPServer" : "smtp.example.com",
+    "EmailSender" : "dbcreator@example.com",
+    "Servers" : [
+        {
+            "Environment":"test",
+            "No": 1,
+            "HAG": "AlwaysOn1Test",
+            "Servers": ["SQL1\\Instance1,14333","SQL2\\Instance1,14333"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"test",
+            "No": 2,
+            "HAG": "AlwaysOn2Test",
+            "Servers": ["SQL1\\Instance2,14334","SQL2\\Instance3,14334"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"test",
+            "No": 3,
+            "HAG": "AlwaysOn3Test",
+            "Servers":["SQL1\\Instance3,14335","SQL1\\Instance3,14335"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"test",
+            "No": 4,
+            "HAG": "AlwaysOn4Test",
+            "Servers":["SQL1\\Instance4,14336","SQL2\\Instance4,14336"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"qa",
+            "No": 1,
+            "HAG": "AlwaysOn1QA",
+            "Servers":["SQL1QA\\Instance1","SQL2QA\\Instance1"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"qa",
+            "No": 2,
+            "HAG": "AlwaysOn2QA",
+            "Servers":["SQL1QA\\Instance2","SQL2QA\\Instance2"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"prod",
+            "No": 1,
+            "HAG": "AlwaysOn1Prod",
+            "Servers":["SQL1PRod\\Instance1","SQL2PRod\\Instance1"],
+            "AzureSubscription" : null
+        },
+        {
+            "Environment":"test",
+            "No": 5,
+            "HAG": null,
+            "Servers": "app-database-test-sqlmi.randomguid.database.windows.net",
+            "AzureSubscription" : "dev-subscription"
+        },
+        {
+            "Environment":"qa",
+            "No": 5,
+            "HAG": null,
+            "Servers":"app-database-qa-sqlmi.randomguid.database.windows.net",
+            "AzureSubscription" : "dev-subscription"
+        }
+
+    ]
+}
